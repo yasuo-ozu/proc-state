@@ -1,0 +1,30 @@
+[package]
+name = "proc-state"
+description = "Sustain global variables between individual proc-macro call"
+authors = ["Yasuo Ozu <yasuo@ozu.email>"]
+repository = "https://github.com/yasuo-ozu/proc-state"
+license = "MIT"
+version = "0.1.0"
+keywords = ["macros", "syn", "proc-macro"]
+categories = ["rust-patterns", "development-tools::procedural-macro-helpers"]
+edition = "2021"
+
+[lib]
+path = "lib.rs"
+
+[dependencies]
+proc-state-macro = { path = "macro", version = "0.1.0" }
+
+[dependencies.syn]
+version = "2.0"
+features = [ "full", "derive", "printing", "extra-traits"]
+
+[workspace]
+
+members = [
+	".",
+	"testing",
+	"macro",
+]
+
+resolver = "2"

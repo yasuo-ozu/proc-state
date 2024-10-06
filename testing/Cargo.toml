@@ -1,0 +1,18 @@
+[package]
+name = "proc-state-testing"
+description = "Sustain global variables between individual proc-macro call"
+authors = ["Yasuo Ozu <yasuo@ozu.email>"]
+repository = "https://github.com/yasuo-ozu/proc-state"
+license = "MIT"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+path = "lib.rs"
+proc-macro = true
+
+[dependencies]
+proc-state = { path = "..", version = "0.1.0" }
+proc-macro2 = "1.0"
+template-quote = "0.4"
