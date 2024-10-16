@@ -16,6 +16,10 @@ To overcome this, the library introduces the [`Global<T>`] type, where `T` must 
 
 By using this library, you can easily manage persistent global state across procedural macro invocations in a safe and efficient manner.
 
+## Limitation
+
+In some cases, rustc may invocates each proc-macro calls in different rustc processes. In that case, [`Global<T>`] is initialized as empty in each processes independently and thus we cannot any state beyond the process boundary. It is not a problem when you use this crate to cache someting.
+
 ## Caution
 
 This is an experimental and tricky library, which depends deeply on detailed rustc implementations. It may be broken at any time. This macro is intended to be deal with your proc-macro code, which means it only generate codes and it does not affect of other ways. So the interface is defined as safe for now. Use it on your own responsibility.

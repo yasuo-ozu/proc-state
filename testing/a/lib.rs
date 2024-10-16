@@ -3,7 +3,3 @@ use proc_state_testing_macro::count;
 pub fn routing() -> usize {
     count!()
 }
-
-pub fn routing_a() -> usize {
-    proc_state_testing_a::routing()
-}

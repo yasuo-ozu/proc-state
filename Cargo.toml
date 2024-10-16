@@ -24,6 +24,9 @@ features = [ "full", "derive", "printing", "extra-traits"]
 members = [
 	".",
 	"testing",
+	"testing/macro",
+	"testing/macro2",
+	"testing/a",
 	"macro",
 ]
 

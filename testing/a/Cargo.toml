@@ -1,5 +1,5 @@
 [package]
-name = "proc-state-testing"
+name = "proc-state-testing-a"
 description = "Sustain global variables between individual proc-macro call"
 authors = ["Yasuo Ozu <yasuo@ozu.email>"]
 repository = "https://github.com/yasuo-ozu/proc-state"
@@ -12,6 +12,4 @@ publish = false
 path = "lib.rs"
 
 [dependencies]
-proc-state-testing-macro = { path = "macro" }
-proc-state-testing-macro2 = { path = "macro2" }
-proc-state-testing-a = { path = "a" }
+proc-state-testing-macro = { path = "../macro" }

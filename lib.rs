@@ -56,6 +56,7 @@ impl<T: Send + Sync> Global<T> {
 
     fn get_ident_name(&self) -> String {
         let mut hasher = DefaultHasher::new();
+        std::process::id().hash(&mut hasher);
         self.file.hash(&mut hasher);
         self.line.hash(&mut hasher);
         self.module_path.hash(&mut hasher);
